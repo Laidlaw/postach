@@ -13,8 +13,8 @@
 
     {{ header_meta }}
 
-    <link href="{{ static('themes/_assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
-    <link href="{{ static('themes/_assets/bootstrap/css/bootstrap-responsive.min.css') }}" rel="stylesheet" />
+    <!-- <link href="{{ static('themes/_assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" /> -->
+    <!-- <link href="{{ static('themes/_assets/bootstrap/css/bootstrap-responsive.min.css') }}" rel="stylesheet" /> -->
     <link href="{{ static('themes/_assets/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,900' rel='stylesheet' type='text/css'>
     <!--<link href="{{ static('themes/apex/apex.css') }}" rel="stylesheet" />-->
@@ -67,55 +67,66 @@
       {{ login_form }}
 
     {% else  %}
+<div class="wrapper">
+   <div class="sidebar">
+        <div class="header">
+            <hgroup>
+              <a class="logo" href="/">
+                <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" />
+              </a>
+                <h1 class="brand-title">{{ site.name }}</h1>
+                <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+            </hgroup>
 
-    <div class="row">
+            <nav class="nav">
+                <ul class="social">
+                    {% if site.twitter %}
+                  <li >
+                    <a href="{{ site.twitter }}" title="Twitter" target="_blank">
+                      <i class="icon-twitter"></i> Twitter
+                    </a>
+                  </li>
+                  {% endif %}
+
+                  {% if site.facebook %}
+                  <li >
+                    <a href="{{ site.facebook }}" title="Facebook" target="_blank">
+                      <i class="icon-facebook-sign"></i> Facebook
+                    </a>
+                  </li>
+                  {% endif %}
+
+                  {% if site.googleplus %}
+                  <li >
+                    <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank">
+                      <i class="icon-google-plus"></i> Google+
+                    </a>
+                  </li>
+                  {% endif %}
+
+                  {% if site.linkedin %}
+                  <li >
+                    <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
+                      <i class="icon-linkedin"></i> LinkedIn
+                    </a>
+                  </li>
+                  {% endif %}
+                  <li >
+                    <a href="{{ site.atom_url }}" title="RSS" target="_blank">
+                      <i class="icon-rss"></i> RSS
+                    </a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<!--     <div class="content">
       <div class="span3 header">
         <div class="bg-img" style="background-image: url('{% if site.cover_photo %}{{ site.cover_photo }}{% else %}{{ static('themes/expanse/images/cover-photo-1.jpg') }}{% endif %}');"></div>
         <div class="gradient"></div>
-        <div class="title">
-          <h1>{{ site.name }}</h1>
-          <ul class="social">
-            {% if site.twitter %}
-            <li>
-              <a href="{{ site.twitter }}" title="Twitter" target="_blank">
-                <i class="icon-twitter"></i> Twitter
-              </a>
-            </li>
-            {% endif %}
 
-            {% if site.facebook %}
-            <li>
-              <a href="{{ site.facebook }}" title="Facebook" target="_blank">
-                <i class="icon-facebook-sign"></i> Facebook
-              </a>
-            </li>
-            {% endif %}
 
-            {% if site.googleplus %}
-            <li>
-              <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank">
-                <i class="icon-google-plus"></i> Google+
-              </a>
-            </li>
-            {% endif %}
-
-            {% if site.linkedin %}
-            <li>
-              <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
-                <i class="icon-linkedin"></i> LinkedIn
-              </a>
-            </li>
-            {% endif %}
-            <li>
-              <a href="{{ site.atom_url }}" title="RSS" target="_blank">
-                <i class="icon-rss"></i> RSS
-              </a>
-            </li>
-          </ul>
-        </div>
-        <a class="logo" href="/">
-          <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" />
-        </a>
         <div class="site-description">
           <ul>
           <li><a href="/">Blog</a></li>
@@ -127,28 +138,26 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="row wrapper">
-
-      <div class="span3 spacer"></div>
+    <div class="content">
 
       {% if is_home or is_tag %}
 
-      <div class="span7 offset1 posts">
-
+      <div class="posts">
+        <h1 class="content-subhead">Recent Posts</h1>
           {% if is_tag %}
           <h4 class="sub-heading span7">Showing all posts tagged {{ tag }}:</h4>
           {% endif %}
 
           {% if posts %}
           {% for post in posts %}
-          <div class="post span7">
-            <div class="row">
-              <div class="span7">
-                <h2><a href="{{ post.permalink }}#disqus_thread">{{ post.title }}</a></h2>
-              </div>
-            </div>
+          <div class="post">
+
+            <header class="post-header">
+              <h2><a href="{{ post.permalink }}#disqus_thread">{{ post.title }}</a></h2>
+            </header>
+
             <div class="post-body" data-type-cleanup="true">
               {{ post.content }}
             </div>
@@ -175,8 +184,8 @@
 
       {% elif post %}
 
-      <div class="span7 offset1 posts">
-        <div class="post whole span6">
+      <div class="posts">
+        <div class="post">
           <h1>{{ post.title }}</h1>
           <div class="post-info">
             <div class="info-left">
@@ -249,6 +258,7 @@
     {{ footer_meta }}
 
     <!-- bootstrap -->
-    <script src="{{ static('themes/_assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- <script src="{{ static('themes/_assets/bootstrap/js/bootstrap.min.js') }}"></script> -->
+    </div>
   </body>
 </html>

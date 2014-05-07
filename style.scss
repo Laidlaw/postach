@@ -1,19 +1,11 @@
-@import "var";
+
 //@import "partials/helpers";
 
 @import "guides/normalize";
-@import "pure/buttons-core";
-@import "pure/buttons";
-//@import "pure/forms-r";
-//@import "pure/forms";
-@import "pure/grids-core";
-@import "pure/grids-r";
-@import "pure/grids-units";
-@import "pure/menus-core";
-@import "pure/menus-paginator";
-@import "pure/menus-r";
-@import "pure/menus";
-@import "pure/tables";
+@import "guides/var";
+@import "guides/typebase";
+//@import "guides/typography";
+@import "bower_components/pure.scss/pure";
 
 //@import "partials/typography";
 @import "partials/global";
