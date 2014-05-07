@@ -1,0 +1,24 @@
+{
+  "name": "postach",
+  "version": "0.0.0",
+  "authors": [
+    "Alan Laidlaw <alan.laidlaw@iostudio.com>"
+  ],
+  "description": "Blog theme for postach.io",
+  "keywords": [
+    "evernote",
+    "blog"
+  ],
+  "license": "MIT",
+  "homepage": "blog.alanlaidlaw.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pure-scss": "~0.3.0"
+  }
+}
