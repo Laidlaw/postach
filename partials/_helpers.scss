@@ -100,6 +100,23 @@
 .no-flick {
   -webkit-transform: translate3d(0, 0, 0);
 }
+
+.accel {
+   -webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+  /* Other transform properties here */
+}
+
+.fancy-underline {
+  text-shadow: 2px 0 0 $cool-white, -2px 0 0 $cool-white;
+  background-image: linear-gradient(to left, rgba(61, 79, 93, 0.5), rgba(61, 79, 93, 0.5));
+  background-position: 0 1.02em;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+}
+
 .vertical-center {
   position: relative;
   top: 50%;

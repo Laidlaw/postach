@@ -74,11 +74,12 @@
               <a class="logo" href="/">
                 <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" />
               </a>
-                <h1 class="brand-title">{{ site.name }}</h1>
-                <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+               <!--  <h1 class="brand-title">{{ site.name }}</h1>
+                <h2 class="brand-tagline">Creating a blog layout using Pure</h2> -->
             </hgroup>
-
+          {% if is_home or is_tag %}
             <nav class="nav">
+              <cite>Site is still a WIP</cite>
                 <ul class="social">
                     {% if site.twitter %}
                   <li >
@@ -118,10 +119,41 @@
                   </li>
                 </ul>
             </nav>
+
+          {% elif post %}
+          <nav class="nav">
+          <cite>Site is still a WIP</cite>
+            <div class="post-info">
+              <div class="info-left">
+                <p class="date">{{ post.created_at|format_date }}</p>
+              </div>
+              <div class="info-right">
+                <p class="comments">
+                  <a href="/"><i class="icon-comment"></i> 0</a>
+                </p>
+              </div>
+            </div>
+             {{ theme.social.bar }}
+
+              {% if post.tags %}
+              <ul class="post-tags">
+              {% for tag in post.tags %}
+                <li><a href="/tag/{{ tag }}">{{ tag|format_tag(link=False, humanize=True) }}</a></li>
+              {% endfor %}
+              </ul>
+              {% endif %}
+
+              <div class="post-footer">
+                <p class="back"><a href="/">&laquo; Go Back</a></p>
+              </div>
+          </nav>
+          {% endif %}
+
         </div>
     </div>
 
-<!--     <div class="content">
+{#  /////////// EXCLUDED SECTION
+    <div class="content">
       <div class="span3 header">
         <div class="bg-img" style="background-image: url('{% if site.cover_photo %}{{ site.cover_photo }}{% else %}{{ static('themes/expanse/images/cover-photo-1.jpg') }}{% endif %}');"></div>
         <div class="gradient"></div>
@@ -138,7 +170,8 @@
           </ul>
         </div>
       </div>
-    </div> -->
+    </div>
+#}
 
     <div class="content">
 
@@ -187,6 +220,9 @@
       <div class="posts">
         <div class="post">
           <h1>{{ post.title }}</h1>
+
+
+        {# /////////// EXCLUDED SECTION
           <div class="post-info">
             <div class="info-left">
               <p class="date">{{ post.created_at|format_date }}</p>
@@ -197,6 +233,9 @@
               </p>
             </div>
           </div>
+        #}
+
+
           <div class="post-body">
             <div class="post-content" data-type-cleanup="true">
               {{ post.content }}
@@ -206,7 +245,9 @@
             <p><a href="{{ post.url }}"><i class="icon-share"></i> {{ post.url }}</a></p>
             {% endif %}
 
-            {{ theme.social.bar }}
+        {#  /////////// EXCLUDED SECTION
+
+           {{ theme.social.bar }}
 
             {% if post.tags %}
             <ul class="post-tags">
@@ -215,10 +256,16 @@
             {% endfor %}
             </ul>
             {% endif %}
+        #}
+
           </div>
+
+        {#  /////////// EXCLUDED SECTION
           <div class="post-footer">
-            <p class="back"><a href="/">&laquo; Go Back</a></p>
+            <p class="back">test<a href="/">&laquo; Go Back</a></p>
           </div>
+        #}
+
           {% if site.disqus %}
           <div class="post-comments">
             <div id="disqus_thread"></div>
@@ -252,11 +299,13 @@
     {% endif %}
 
     </div>
+    <footer>
 
+    </footer>
     {% endif %}
 
     {{ footer_meta }}
-
+<script src=""></script>
     <!-- bootstrap -->
     <!-- <script src="{{ static('themes/_assets/bootstrap/js/bootstrap.min.js') }}"></script> -->
     </div>

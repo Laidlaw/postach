@@ -1,5 +1,31 @@
+
+
+a[href$=".gif"], a[href$=".png"], a[href$=".jpg"] {
+  float: left;
+  width:100%;
+  img {
+    width:100%;
+    max-width:80%;
+    border: 6px solid white;
+  }
+}
+
+blockquote {
+  // border-right:6px solid $blue;
+  display: inline-block;
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-style: italic;
+    margin:0;
+    color:$cool-blue;
+  }
+  cite {
+    font-size: .9em;
+  }
+}
 body {
-  background-color: #E8E8EE;  //#EAFCFD;
+  background-color: $cool-white;  //#EAFCFD;
 }
 
 .wrapper {
@@ -8,17 +34,42 @@ body {
 }
 
 .sidebar {
-  background: rgb(61, 79, 93);
+  background: $cool-blue;
   color: #fff;
+  // width:60px;
+  // @include slideInLeft();
   @extend %pure-u-1;
-  @extend %pure-u-1-4;
+  @extend %pure-u-1-5;
+
+  nav.nav {
+    display: none;
+  }
+  &:hover {
+
+    nav.nav {
+      display:block;
+    }
+  }
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    @extend .hug;
 }
 
 .content {
   @extend %pure-u-1;
-  @extend %pure-u-3-4;
+  @extend %pure-u-4-5;
+  @extend .hug;
+  @extend .accel;
 }
-.posts {padding: 2em 1em 0;}
+.posts {padding: 0em 1em 0;}
 .post {
     padding-bottom: 2em;
     border-bottom: 1px solid #d8d8d8;
@@ -33,56 +84,42 @@ body {
     font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
+    font-size: 1.34em;
 }
 
-a.logo {
-    display: block;
-    position: relative;
-    width: 55px;
-    height: 55px;
-    border: 4px solid #ffffff;
-    background-color: #000000;
-    margin: 0 auto;
-    margin-top: 80px;
-    text-align: center;
-    border-radius: 50%;
-  }
-   a.logo:hover {
-    background-color: #0ADFEF;
-  }
-   a.logo img {
-    border-radius: 50%;
-  }
-   a.logo i {
-    position: relative;
-    display: block;
-    color: #ffffff;
-    font-size: 40px;
-    line-height: 40px;
-    top: 50%;
-    margin-top: -20px;
-  }
 
-  ul.social {
-    display: inline-block;
-    margin: 0 auto;
-    z-index: 1000;
+.socialbar-container, .post-tags {
+  font-size: 1em;
+}
+
+.post-tags {
+  li {
+    list-style: none;
+    float:left;
+    a {
+      font-family: 'Roboto';
+      font-weight: 500;
+      background-color: $blue;
+    }
   }
-  ul.social li {
-    list-style-type: none;
-    display: inline-block;
-  }
-  ul.social li a {
-    display: inline-block;
-    width: 25px;
-    height: 21px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding-top: 4px;
-    margin: 0 5px 0 5px;
-  }
-  ul.social li a:hover {
-    background-color: #0ADFEF;
-  }
+}
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 20%;
+    }
+
+    .header {
+        margin: 0 2em 0;
+        // text-align: right;
+        nav {
+          text-align: center;
+        }
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}
