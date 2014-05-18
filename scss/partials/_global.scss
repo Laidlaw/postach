@@ -50,7 +50,11 @@ body {
       display:block;
     }
   }
+  .breakpoint-phone & {
+    background: $cool-white;
+  }
 }
+
 
 .content-subhead {
     text-transform: uppercase;

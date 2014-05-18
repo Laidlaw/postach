@@ -12,13 +12,18 @@
     </title>
 
     {{ header_meta }}
-
+<meta name="breakpoint" content="phone" media="(max-width: 480px)">
+<meta name="breakpoint" content="small-tablet" media="(min-width: 480px) and (max-width: 600px)">
+<meta name="breakpoint" content="tablet" media="(min-width: 600px) and (max-width: 1024px)">
+<meta name="breakpoint" content="widescreen" media="(min-width: 1024px)">
+<meta name="breakpoint" content="retina" media="only screen and (-webkit-min-device-pixel-ratio : 2)">
     <!-- <link href="{{ static('themes/_assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" /> -->
     <!-- <link href="{{ static('themes/_assets/bootstrap/css/bootstrap-responsive.min.css') }}" rel="stylesheet" /> -->
     <link href="{{ static('themes/_assets/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,900' rel='stylesheet' type='text/css'>
     <!--<link href="{{ static('themes/apex/apex.css') }}" rel="stylesheet" />-->
-<link href="https://dl.dropboxusercontent.com/u/1795753/postach/style.css" rel="stylesheet" />
+<link href="https://dl.dropboxusercontent.com/u/1795753/postach/css/style.css" rel="stylesheet" />
+
 
 
 
@@ -305,7 +310,12 @@
     {% endif %}
 
     {{ footer_meta }}
-<script src=""></script>
+<script src="https://dl.dropboxusercontent.com/u/1795753/postach/dist/all.min.js"></script>
+<script>
+  (function() {
+    // $('.post').sidenotes();
+  })();
+</script>
     <!-- bootstrap -->
     <!-- <script src="{{ static('themes/_assets/bootstrap/js/bootstrap.min.js') }}"></script> -->
     </div>
