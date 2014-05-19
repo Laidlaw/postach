@@ -9260,3 +9260,7 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
 /*
 //@ sourceMappingURL=jquery.sidenotes.map
 */
+
+(function() {
+    $('.post-content').sidenotes();
+})();

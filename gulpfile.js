@@ -29,7 +29,7 @@ gulp.task('scripts', function() {
     return gulp.src([
             "bower_components/jquery/jquery.js",
             "bower_components/metaquery/metaquery.jquery.js",
-            // "bower_components/jquery.sidenotes/lib/jquery.sidenotes.js",
+            "bower_components/jquery.sidenotes/lib/jquery.sidenotes.js",
             "js/*.js"
 
         ])
