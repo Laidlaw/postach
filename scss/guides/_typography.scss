@@ -1,5 +1,5 @@
 a {
-    text-decoration: none;
+    //@extend .fancy-underline;
     color: rgb(61, 146, 201);
 }
 a:hover,

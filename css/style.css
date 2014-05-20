@@ -1,3 +1,176 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+/*---------------------------------------------------
+    LESS Elements 0.9.1
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+    MODIFIED BY: Brandon Brown
+  ---------------------------------------------------*/
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
+/* used for styling post content in themes */
+/**
+ * Utilities
+ * Mixins used throughout themes and the main site
+ */
+/**
+ * REM units mixin with PX fallback for legacy browsers with no REM unit support
+ * https://github.com/christopher-ramirez/remixings
+ */
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.invisible {
+  visibility: hidden; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.align-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-justify {
+  text-align: justify; }
+
+.no-underline {
+  text-decoration: none; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.block {
+  display: block; }
+
+.block:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.block:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.inline-block {
+  display: inline-block; }
+
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word; }
+
+.no-flick {
+  -webkit-transform: translate3d(0, 0, 0); }
+
+.accel, .content {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  /* Other transform properties here */ }
+
+.fancy-underline, a, .post h1 {
+  text-shadow: 2px 0 0 #E8E8EE, -2px 0 0 #E8E8EE;
+  background-image: linear-gradient(to left, rgba(61, 79, 93, 0.5), rgba(61, 79, 93, 0.5));
+  background-position: 0 1.02em;
+  background-repeat: repeat-x;
+  background-size: 1px 1px; }
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/**
+ * Visibility Utilites
+ * NOTE: Only include these if you aren't using Bootstrap!
+ */
+.visible-phone {
+  display: none !important; }
+
+.visible-tablet {
+  display: none !important; }
+
+.hidden-desktop {
+  display: none !important; }
+
+.visible-desktop {
+  display: inherit !important; }
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .hidden-desktop {
+    display: inherit !important; }
+  .visible-desktop {
+    display: none !important; }
+  .visible-tablet {
+    display: inherit !important; }
+  .hidden-tablet {
+    display: none !important; } }
+
+@media (max-width: 767px) {
+  .hidden-desktop {
+    display: inherit !important; }
+  .visible-desktop {
+    display: none !important; }
+  .visible-phone {
+    display: inherit !important; }
+  .hidden-phone {
+    display: none !important; } }
+
+.visible-print {
+  display: none !important; }
+
+@media print {
+  .visible-print {
+    display: inherit !important; }
+  .hidden-print {
+    display: none !important; } }
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -393,7 +566,7 @@ code {
   font-size: 1.414rem; }
 
 /* Hug a the block above you */
-.hug, .content-subhead, .content, .content-subhead, .content {
+.hug, .content-subhead, .content {
   margin-top: 0; }
 
 
@@ -528,7 +701,7 @@ this the same font stack that Normalize.css sets for the `body`.
 
 @media (min-width: 768px) and (max-width: 979px) { }
 
-.sidebar, .content, .content, .sidebar, .content, .content {
+.sidebar, .call-out, .content, .call-out, .sidebar, .content {
   display: inline-block;
   *display: inline;
   /* IE < 8: fake inline-block */
@@ -538,10 +711,13 @@ this the same font stack that Normalize.css sets for the `body`.
   vertical-align: top;
   text-rendering: auto; }
 
-.sidebar, .content, .content {
+.sidebar, .call-out, .content {
   width: 100%; }
 
 
+.call-out {
+  width: 33.3333%;
+  *width: 33.3023%; }
 
 
 
@@ -552,7 +728,7 @@ this the same font stack that Normalize.css sets for the `body`.
 
 
 
-.content, .content {
+.content {
   width: 80%;
   *width: 79.969%; }
 
@@ -665,7 +841,6 @@ striping:
 
 
 a {
-  text-decoration: none;
   color: #3d92c9; }
 
 a:hover, a:focus {
@@ -715,33 +890,6 @@ body {
   .breakpoint-phone .sidebar {
     background: #E8E8EE; }
 
-.content-subhead {
-  text-transform: uppercase;
-  color: #aaa;
-  border-bottom: 1px solid #eee;
-  padding: 0.4em 0;
-  font-size: 80%;
-  font-weight: 500;
-  letter-spacing: 0.1em; }
-
-
-.posts {
-  padding: 0em 1em 0; }
-
-.post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid #d8d8d8; }
-
-.post-title {
-  font-size: 2em;
-  color: #222;
-  margin-bottom: 0.2em; }
-
-.post-body {
-  font-family: Georgia, "Cambria", serif;
-  color: #444;
-  line-height: 1.8em;
-  font-size: 1.34em; }
 
 .socialbar-container, .post-tags {
   font-size: 1em; }
