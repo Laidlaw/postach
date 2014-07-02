@@ -33,33 +33,17 @@ body {
   @extend %pure-g;
 }
 
-.sidebar {
-  background: $cool-blue;
-  color: #fff;
-  // width:60px;
-  // @include slideInLeft();
-  @extend %pure-u-1;
-  @extend %pure-u-1-5;
-
-  nav.nav {
-    display: none;
-  }
-  &:hover {
-
-    nav.nav {
-      display:block;
-    }
-  }
-  .breakpoint-phone & {
-    background: $cool-white;
-  }
+.post-info, .post-tags, .post-footer {
+  @extend %clearfix;
 }
 
-  .call-out {
-    @extend %pure-u-1;
-    @extend %pure-u-1-3;
-  }
-
+// article section {
+//   @extend %pure-g;
+//   .call-out {
+//     @extend %pure-u-1;
+//     @extend %pure-u-1-3;
+//   }
+// }
 
 
 .socialbar-container, .post-tags {
@@ -74,6 +58,9 @@ body {
       font-family: 'Roboto';
       font-weight: 500;
       background-color: $blue;
+      padding: 3px;
+      border-radius: 5px;
+      margin-right: 10px;
     }
   }
 }

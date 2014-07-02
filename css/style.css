@@ -107,12 +107,34 @@
   transform: translate3d(0, 0, 0);
   /* Other transform properties here */ }
 
-.fancy-underline, a, .post h1 {
+.fancy-underline, .post h1 {
   text-shadow: 2px 0 0 #E8E8EE, -2px 0 0 #E8E8EE;
   background-image: linear-gradient(to left, rgba(61, 79, 93, 0.5), rgba(61, 79, 93, 0.5));
   background-position: 0 1.02em;
   background-repeat: repeat-x;
   background-size: 1px 1px; }
+
+.post-info, .post-tags, .post-footer {
+  display: block; }
+
+.post-info:after, .post-tags:after, .post-footer:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+hr {
+  border-bottom: 1px solid #666; }
+
+.sidebar, .sidebar nav.nav, a.logo {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
 
 .vertical-center {
   position: relative;
@@ -496,7 +518,7 @@ td, th {
 /* Setup */
 html {
   /* Change default typefaces here */
-  font-family: serif;
+  font-family: sans-serif;
   font-size: 97.5%;
   -webkit-font-smoothing: antialiased; }
 
@@ -534,12 +556,15 @@ h2 {
   font-size: 2.828rem;
   line-height: 3rem;
   margin-top: 3rem; }
+  .breakpoint-phone h2 {
+    font-size: 2.228rem; }
 
 h3 {
-  font-size: 1.414rem; }
+  font-size: 1.414rem;
+  line-height: 2.4rem; }
 
 h4 {
-  font-size: 0.707rem; }
+  font-size: 1.07rem; }
 
 h5 {
   font-size: 0.47133rem; }
@@ -701,7 +726,7 @@ this the same font stack that Normalize.css sets for the `body`.
 
 @media (min-width: 768px) and (max-width: 979px) { }
 
-.sidebar, .call-out, .content, .call-out, .sidebar, .content {
+.sidebar, .breakpoint-phone .sidebar, .content, .breakpoint-phone .content, .sidebar, .content {
   display: inline-block;
   *display: inline;
   /* IE < 8: fake inline-block */
@@ -711,13 +736,10 @@ this the same font stack that Normalize.css sets for the `body`.
   vertical-align: top;
   text-rendering: auto; }
 
-.sidebar, .call-out, .content {
+.sidebar, .breakpoint-phone .sidebar, .content, .breakpoint-phone .content {
   width: 100%; }
 
 
-.call-out {
-  width: 33.3333%;
-  *width: 33.3023%; }
 
 
 
@@ -841,7 +863,7 @@ striping:
 
 
 a {
-  color: #3d92c9; }
+  color: #08b3bf; }
 
 a:hover, a:focus {
   text-decoration: underline; }
@@ -856,6 +878,11 @@ h1, h2, h3, h4, h5 {
 
 h2 {
   line-height: 3.4rem; }
+
+aside {
+  border-right: 6px solid #0ADFEF;
+  display: inline-block;
+  background: #cbcbd8; }
 
 a[href$=".gif"], a[href$=".png"], a[href$=".jpg"] {
   float: left;
@@ -880,16 +907,6 @@ body {
   background-color: #E8E8EE; }
 
 
-.sidebar {
-  background: #3d4f5d;
-  color: #fff; }
-  .sidebar nav.nav {
-    display: none; }
-  .sidebar:hover nav.nav {
-    display: block; }
-  .breakpoint-phone .sidebar {
-    background: #E8E8EE; }
-
 
 .socialbar-container, .post-tags {
   font-size: 1em; }
@@ -900,7 +917,10 @@ body {
   .post-tags li a {
     font-family: 'Roboto';
     font-weight: 500;
-    background-color: #0ADFEF; }
+    background-color: #0ADFEF;
+    padding: 3px;
+    border-radius: 5px;
+    margin-right: 10px; }
 
 @media (min-width: 48em) {
   .content {
@@ -915,6 +935,16 @@ body {
     top: 0;
     bottom: 0; } }
 
+.sidebar {
+  background: #3d4f5d;
+  color: #fff; }
+  .sidebar nav.nav {
+    opacity: 0; }
+    .breakpoint-phone .sidebar nav.nav {
+      opacity: 1; }
+  .sidebar:hover nav.nav {
+    opacity: 1; }
+
 a.logo {
   display: block;
   position: relative;
@@ -925,7 +955,12 @@ a.logo {
   margin: 0 auto;
   margin-top: 120px;
   text-align: center;
-  border-radius: 50%; }
+  border-radius: 50%;
+  font-size: 0; }
+  .breakpoint-phone a.logo {
+    margin-top: 30px;
+    width: 80px;
+    height: 80px; }
 
 a.logo:hover {
   background-color: #0ADFEF; }
@@ -942,12 +977,23 @@ a.logo i {
   top: 50%;
   margin-top: -20px; }
 
+.nav h1 {
+  font-size: 2em;
+  color: #E8E8EE; }
+  .breakpoint-phone .nav h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.4rem; }
+
 ul.social {
   display: inline-block;
   margin: 0 auto;
   z-index: 1000;
   text-align: center;
-  padding: 10% 0; }
+  padding: 20% 0; }
+  .breakpoint-phone ul.social {
+    padding: 5% 0;
+    width: 100%; }
 
 ul.social li {
   list-style-type: none;
@@ -982,7 +1028,8 @@ ul.social li a:hover {
 
 
 .posts {
-  padding: 0em 1em 0; }
+  padding: 0em 1em 0;
+  max-width: 800px; }
 
 .post {
   padding-bottom: 2em;
@@ -997,7 +1044,9 @@ ul.social li a:hover {
   font-family: Georgia, "Cambria", serif;
   color: #444;
   line-height: 1.8em;
-  font-size: 1.34em; }
+  font-size: 1.34rem; }
+  .breakpoint-phone .post-body {
+    font-size: 1.04rem; }
 
 .sub-heading {
   padding-bottom: 40px; }

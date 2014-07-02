@@ -117,6 +117,31 @@
   background-size: 1px 1px;
 }
 
+%clearfix {
+  display: block;
+}
+%clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+hr {
+  border-bottom: 1px solid #666;
+}
+
+%animate{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
 .vertical-center {
   position: relative;
   top: 50%;
