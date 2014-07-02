@@ -15,7 +15,13 @@
   @extend %pure-u-4-5;
   @extend .hug;
   @extend .accel;
-  .breakpoint-phone & {
+  .breakpoint-widescreen & {
+    margin: 0 2em 0;
+    padding: 2em 3em 0;
+    margin-left: 20%;
+  }
+
+  .breakpoint-#{ $sidebar-switch } & {
     @extend %pure-u-1;
   }
 }

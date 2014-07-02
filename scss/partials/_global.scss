@@ -64,23 +64,3 @@ body {
     }
   }
 }
-@media (min-width: 48em) {
-    .content {
-        padding: 2em 3em 0;
-        margin-left: 20%;
-    }
-
-    .header {
-        margin: 0 2em 0;
-        // text-align: right;
-        nav {
-          text-align: center;
-        }
-    }
-
-    .sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-    }
-}

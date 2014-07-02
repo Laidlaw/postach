@@ -11,7 +11,7 @@ a.logo {
   border-radius: 50%;
   font-size:0;
   @extend %animate;
-  .breakpoint-phone & {
+  .breakpoint-#{ $sidebar-switch } & {
     margin-top: 30px;
     width: 80px;
     height: 80px;
@@ -37,7 +37,7 @@ a.logo:hover {
 .nav h1 {
   font-size: 2em;
   color: $cool-white;
-  .breakpoint-phone &  {
+  .breakpoint-#{ $sidebar-switch } &  {
     // color: $cool-blue;
     text-align: center;
     margin-top:0;
@@ -52,7 +52,7 @@ ul.social {
   z-index: 1000;
   text-align:  center;
   padding: 20% 0;
-  .breakpoint-phone & {
+  .breakpoint-#{ $sidebar-switch } & {
     padding: 5% 0;
     width:100%;
   }

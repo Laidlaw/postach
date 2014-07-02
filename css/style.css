@@ -130,7 +130,7 @@
 hr {
   border-bottom: 1px solid #666; }
 
-.sidebar, .sidebar nav.nav, a.logo {
+.sidebar nav.nav, a.logo {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -726,7 +726,7 @@ this the same font stack that Normalize.css sets for the `body`.
 
 @media (min-width: 768px) and (max-width: 979px) { }
 
-.sidebar, .breakpoint-phone .sidebar, .content, .breakpoint-phone .content, .sidebar, .content {
+.sidebar, .breakpoint-tablet-down .sidebar, .content, .breakpoint-tablet-down .content, .sidebar, .content {
   display: inline-block;
   *display: inline;
   /* IE < 8: fake inline-block */
@@ -736,7 +736,7 @@ this the same font stack that Normalize.css sets for the `body`.
   vertical-align: top;
   text-rendering: auto; }
 
-.sidebar, .breakpoint-phone .sidebar, .content, .breakpoint-phone .content {
+.sidebar, .breakpoint-tablet-down .sidebar, .content, .breakpoint-tablet-down .content {
   width: 100%; }
 
 
@@ -922,28 +922,21 @@ body {
     border-radius: 5px;
     margin-right: 10px; }
 
-@media (min-width: 48em) {
-  .content {
-    padding: 2em 3em 0;
-    margin-left: 20%; }
-  .header {
-    margin: 0 2em 0; }
-    .header nav {
-      text-align: center; }
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0; } }
-
 .sidebar {
   background: #3d4f5d;
-  color: #fff; }
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0; }
   .sidebar nav.nav {
-    opacity: 0; }
-    .breakpoint-phone .sidebar nav.nav {
+    opacity: 0;
+    text-align: center; }
+    .breakpoint-tablet-down .sidebar nav.nav {
       opacity: 1; }
   .sidebar:hover nav.nav {
     opacity: 1; }
+  .breakpoint-tablet-down .sidebar {
+    position: relative; }
 
 a.logo {
   display: block;
@@ -957,7 +950,7 @@ a.logo {
   text-align: center;
   border-radius: 50%;
   font-size: 0; }
-  .breakpoint-phone a.logo {
+  .breakpoint-tablet-down a.logo {
     margin-top: 30px;
     width: 80px;
     height: 80px; }
@@ -980,7 +973,7 @@ a.logo i {
 .nav h1 {
   font-size: 2em;
   color: #E8E8EE; }
-  .breakpoint-phone .nav h1 {
+  .breakpoint-tablet-down .nav h1 {
     text-align: center;
     margin-top: 0;
     font-size: 1.4rem; }
@@ -991,7 +984,7 @@ ul.social {
   z-index: 1000;
   text-align: center;
   padding: 20% 0; }
-  .breakpoint-phone ul.social {
+  .breakpoint-tablet-down ul.social {
     padding: 5% 0;
     width: 100%; }
 
@@ -1026,6 +1019,10 @@ ul.social li a:hover {
   font-weight: 500;
   letter-spacing: 0.1em; }
 
+.breakpoint-widescreen .content {
+  margin: 0 2em 0;
+  padding: 2em 3em 0;
+  margin-left: 20%; }
 
 .posts {
   padding: 0em 1em 0;
