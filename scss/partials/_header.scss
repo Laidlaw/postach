@@ -44,7 +44,9 @@ a.logo:hover {
     font-size: 1.4rem;
   }
 }
-
+.nav h3 {
+  color: $cool-white;
+}
 // SOCIAL
 ul.social {
   display: inline-block;

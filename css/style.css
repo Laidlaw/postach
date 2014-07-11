@@ -875,6 +875,10 @@ h1, h2, h3, h4, h5 {
 
 .post h1 {
   margin-top: 80px; }
+  .breakpoint-phone .post h1 {
+    font-size: 3em;
+    text-shadow: none;
+    background-image: none; }
 
 h2 {
   line-height: 3.4rem; }
@@ -977,6 +981,9 @@ a.logo i {
     text-align: center;
     margin-top: 0;
     font-size: 1.4rem; }
+
+.nav h3 {
+  color: #E8E8EE; }
 
 ul.social {
   display: inline-block;
