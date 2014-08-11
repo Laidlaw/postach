@@ -9265,6 +9265,33 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
     $('.post-content').sidenotes();
 })();
 
+//MAKE YOUTUBE VIDEOS RESPONSIVE
+
+jQuery(document).ready(function($){
+  function responsiveIframe() {
+    $('iframe').each(function(){
+      var iw = $(this).width();
+      var ih = $(this).height();
+      var ip = $(this).parent().width();
+      var ipw = ip/iw;
+      var ipwh = Math.round(ih*ipw);
+      $(this).css({
+        'width': ip,
+        'height' : ipwh,
+      });
+    });
+  }
+
+  responsiveIframe();
+
+  //Call function again if window resized
+  $(window).resize(function(){
+    responsiveIframe();
+  });
+
+});
+
+
 // Sidebar navigation
 (function () {
   'use strict';

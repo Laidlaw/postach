@@ -88,7 +88,11 @@
 
             <nav class="nav">
               <h1>Alan Laidlaw</h1>
-              <h3><a href="http://alanlaidlaw.tumblr.com" title="Tumblr" target="_blank">1. What I've been reading</a></h3>
+              {# {% for page in pages %}
+                <h3><a href="{{page.permalink}}" title="{{page.title}}" >{{page.title}}</a></h3>
+              {% endfor %} #}
+              <h3><a href="/selfie" title="Tumblr" >About</a></h3>
+              <h3><a href="http://alanlaidlaw.tumblr.com" title="Tumblr" >Consuming</a></h3>
               {% if is_home or is_tag %}
                 <ul class="social">
                     {% if site.twitter %}
@@ -108,11 +112,11 @@
                   {% endif %}
 
 
-                  <li >
+                  {# <li >
                     <a href="http://alanlaidlaw.tumblr.com" title="Tumblr" target="_blank">
                       <i class="icon-tumblr-sign"></i> What I'm Reading
                     </a>
-                  </li>
+                  </li> #}
 
 
                   {% if site.linkedin %}
@@ -227,8 +231,8 @@
       {% elif post %}
 
       <section class="posts">
-        <article class="post">
-          <h1>{{ post.title }}</h1>
+        <article class="post {{post.type}}">
+          <h1 class="post-marquee">{{ post.title }}</h1>
           <div class="post-body">
             <div class="post-content" data-type-cleanup="true">
               {{ post.content }}
@@ -258,7 +262,7 @@
 
     {% elif post.type == 'page' %}
 
-      <section class="span7 offset1 posts">
+      <section class="span7 offset1 posts {{ set_active(page.permalink) }}">
         <article class="post whole span7">
           <h1>{{ page.title }}</h1>
           <div class="post-body" data-type-cleanup="true">

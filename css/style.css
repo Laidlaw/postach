@@ -527,8 +527,6 @@ ul, ol {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
 
-ul li, ol li {
-  line-height: 1.5rem; }
 
 ul ul, ol ul, ul ol, ol ol {
   margin-top: 0;
@@ -896,6 +894,10 @@ a[href$=".gif"], a[href$=".png"], a[href$=".jpg"] {
     max-width: 80%;
     border: 6px solid white; }
 
+hr {
+  border-bottom: 1px solid #d8d8d8;
+  border-top: 0; }
+
 blockquote {
   display: inline-block; }
   blockquote p {
@@ -1043,6 +1045,9 @@ ul.social li a:hover {
   font-size: 2em;
   color: #222;
   margin-bottom: 0.2em; }
+
+.page .post-marquee {
+  display: none; }
 
 .post-body {
   font-family: Georgia, "Cambria", serif;
