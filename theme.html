@@ -97,7 +97,7 @@
                 <ul class="social">
                     {% if site.twitter %}
                   <li >
-                    <a href="{{ site.twitter }}" title="Twitter" target="_blank">
+                    <a href="{{ site.twitter }}" title="Twitter" target="_blank" rel="me">
                       <i class="icon-twitter"></i> Twitter
                     </a>
                   </li>
@@ -111,6 +111,11 @@
                   </li>
                   {% endif %}
 
+                  <li >
+                    <a href="http://github.com/laidlaw" title="Github" target="_blank" rel="me">
+                      <i class="icon-github-sign"></i>
+                    </a>
+                  </li>
 
                   {# <li >
                     <a href="http://alanlaidlaw.tumblr.com" title="Tumblr" target="_blank">
@@ -121,7 +126,7 @@
 
                   {% if site.linkedin %}
                   <li >
-                    <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
+                    <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank" rel="me">
                       <i class="icon-linkedin"></i> LinkedIn
                     </a>
                   </li>
@@ -201,7 +206,7 @@
           <article class="post">
 
             <header class="post-header">
-              <h2><a href="{{ post.permalink }}#disqus_thread">{{ post.title }}</a></h2>
+              <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
             </header>
 
             <div class="post-body" data-type-cleanup="true">
