@@ -23,7 +23,8 @@
     "pure": "~0.6.0",
     "bourbon": "~4.2.2",
     "neat": "~1.7.2",
-    "bitters": "~1.0.0"
+    "bitters": "~1.0.0",
+    "materialize": "~0.96.1"
   },
   "devDependencies": {
     "metaquery": "~1.1.1"
