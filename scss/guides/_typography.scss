@@ -1,5 +1,5 @@
 a {
-    //@extend .fancy-underline;
+    @extend .fancy-underline;
     color: $blue-tint; //rgb(61, 146, 201);
 }
 a:hover,

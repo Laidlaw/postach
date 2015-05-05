@@ -22,7 +22,6 @@
     "jquery.sidenotes": "~0.2.0"
   },
   "devDependencies": {
-    "pure.scss": "*",
     "metaquery": "~1.1.1"
   }
 }
