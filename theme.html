@@ -96,7 +96,7 @@
                 <a href="https://www.instapaper.com/p/alanlaidlaw" title="Instapaper" >Input</a> /
                 <a href="https://medium.com/sudo-science" title="Medium" >Output</a>
               </h3>
-              {% if is_home or is_tag %}
+
                 <ul class="social">
                     {% if site.twitter %}
                   <li >
@@ -140,7 +140,8 @@
                     </a>
                   </li>
                 </ul>
-
+                {% if is_home or is_tag %}
+                
                 {% elif post %}
                   {#  /////////// EXCLUDED SECTION
                     <div class="post-info">
