@@ -100,7 +100,7 @@
 .no-flick {
   -webkit-transform: translate3d(0, 0, 0); }
 
-.accel, .content {
+.accel {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -588,7 +588,7 @@ code {
   font-size: 1.414rem; }
 
 /* Hug a the block above you */
-.hug, .content-subhead, .content {
+.hug {
   margin-top: 0; }
 
 a {
@@ -747,44 +747,6 @@ ul.social li a {
 
 ul.social li a:hover {
   background-color: #0ADFEF; }
-
-.content-subhead {
-  text-transform: uppercase;
-  color: #aaa;
-  border-bottom: 1px solid #eee;
-  padding: 0.4em 0;
-  font-size: 80%;
-  font-weight: 500;
-  letter-spacing: 0.1em; }
-
-.breakpoint-widescreen .content {
-  margin: 0 2em 0;
-  padding: 2em 3em 0;
-  margin-left: 20%; }
-
-.posts {
-  padding: 0em 1em 0;
-  max-width: 800px; }
-
-.post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid #d8d8d8; }
-
-.post-title {
-  font-size: 2em;
-  color: #222;
-  margin-bottom: 0.2em; }
-
-.page .post-marquee {
-  display: none; }
-
-.post-body {
-  font-family: Georgia, "Cambria", serif;
-  color: #444;
-  line-height: 1.8em;
-  font-size: 1.34rem; }
-  .breakpoint-phone .post-body {
-    font-size: 1.04rem; }
 
 .sub-heading {
   padding-bottom: 40px; }
