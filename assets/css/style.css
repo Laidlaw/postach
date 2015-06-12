@@ -550,7 +550,8 @@ blockquote {
     font-size: 0.9em; }
 
 body {
-  background-color: #E8E8EE; }
+  background-color: #E8E8EE;
+  line-height: 1.7em; }
 
 .wrapper {
   display: -webkit-box;
@@ -815,7 +816,7 @@ div.footer ul li.link-icon a {
   margin: 0;
   padding: 0; }
   .content.home .posts article {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
+    width: 30%;
+    padding: 0.8em 1em 0;
+    /* background: hsla(31,15%,50%,.1); */
+    border-radius: 3px; }

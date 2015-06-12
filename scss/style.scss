@@ -34,9 +34,9 @@
   padding: 0;
 
   article {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+    width: 30%;
+    padding: .8em 1em 0;
+  /* background: hsla(31,15%,50%,.1); */
+    border-radius: 3px;
   }
 }

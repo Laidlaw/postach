@@ -29,6 +29,7 @@ blockquote {
 }
 body {
   background-color: $cool-white;  //#EAFCFD;
+  line-height: 1.7em;
 }
 
 .wrapper {
@@ -46,6 +47,7 @@ body {
   height: 100%;
 
 }
+
 
 .post-info, .post-tags, .post-footer {
   @extend %clearfix;
