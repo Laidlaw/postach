@@ -37,7 +37,10 @@
     header {
       background-color: $cool-blue;
       padding: 2em;
-      margin-bottom: 1em;
+    }
+    .post-body {
+      background:white;
+      padding:1em;
     }
   }
 }
