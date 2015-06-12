@@ -518,7 +518,7 @@ h1, h2, h3, h4, h5 {
     text-shadow: none;
     background-image: none; }
 
-h1, h2 {
+h1 a, h2 a {
   text-decoration: none; }
 
 aside {
@@ -823,6 +823,8 @@ div.footer ul li.link-icon a {
     padding: 0.8em 1em 0;
     /* background: hsla(31,15%,50%,.1); */
     border-radius: 3px; }
+    .content.home .posts article header {
+      background-color: #3d4f5d; }
 
 .post.post {
   max-width: 800px;
