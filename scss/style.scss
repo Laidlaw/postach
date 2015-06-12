@@ -27,6 +27,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  background-color: #fff;
+  margin-bottom: 2em;
 
   article {
     width: 30%;
@@ -39,7 +41,6 @@
       padding: 2em;
     }
     .post-body {
-      background:white;
       padding:1em;
     }
   }
