@@ -41,15 +41,15 @@
     /* align-items: inherit; */
     align-content: stretch;
 
-    .breakpoint-tablet & {
+    .breakpoint-tablet-down & {
       width: 48%;
     }
     .breakpoint-small-tablet-down & {
-      width:auto;
+      width:100%;
     }
 
     header {
-      background-color: $cool-blue;
+      background-color: $terminally-blue;
       padding: 2em;
     }
   }
