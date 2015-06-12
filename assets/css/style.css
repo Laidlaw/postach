@@ -815,6 +815,7 @@ div.footer ul li.link-icon a {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  align-content: flex-start;
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -824,7 +825,9 @@ div.footer ul li.link-icon a {
     /* background: hsla(31,15%,50%,.1); */
     border-radius: 3px; }
     .content.home .posts article header {
-      background-color: #3d4f5d; }
+      background-color: #3d4f5d;
+      padding: 2em;
+      margin-bottom: 1em; }
 
 .post.post {
   max-width: 800px;

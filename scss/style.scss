@@ -29,6 +29,7 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  align-content: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -41,6 +42,8 @@
 
     header {
       background-color: $cool-blue;
+      padding: 2em;
+      margin-bottom: 1em;
     }
   }
 }
