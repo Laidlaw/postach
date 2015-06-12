@@ -1,7 +1,4 @@
 .header {
-    -webkit-box-flex: 0;
-    -webkit-flex: none;
-    -ms-flex: none;
     flex: none;
     h1 {
       text-align: center;
@@ -9,7 +6,7 @@
 }
 
 .button {
-  transition: background-color 0.3s;
+  transition: background-color 0.4s;
   display: inline-block;
   padding: 0.6em 1em;
   background: hsla(31, 15%, 50%, 0.15);
