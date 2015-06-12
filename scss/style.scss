@@ -36,6 +36,10 @@
   /* background: hsla(31,15%,50%,.1); */
     border-radius: 3px;
     background-color: #fff;
+    display: flex;
+  flex-direction: column;
+  /* align-items: inherit; */
+  align-content: stretch;
 
     header {
       background-color: $cool-blue;
@@ -50,4 +54,13 @@
 .post.post {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.post-body {
+  flex:1;
+}
+.post-info {
+  display:flex;
+  justify-content:flex-end;
+
 }
