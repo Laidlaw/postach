@@ -518,6 +518,9 @@ h1, h2, h3, h4, h5 {
     text-shadow: none;
     background-image: none; }
 
+h1, h2 {
+  text-decoration: none; }
+
 aside {
   border-right: 6px solid #0ADFEF;
   display: inline-block;
