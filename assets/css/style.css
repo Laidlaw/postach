@@ -1,11 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
-/*---------------------------------------------------
-    LESS Elements 0.9.1
-  ---------------------------------------------------
-    A set of useful LESS mixins
-    More info at: http://lesselements.com
-    MODIFIED BY: Brandon Brown
-  ---------------------------------------------------*/
 * html .clearfix {
   zoom: 1; }
 
@@ -106,13 +99,6 @@
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   /* Other transform properties here */ }
-
-.fancy-underline, a, .post h1 {
-  text-shadow: 2px 0 0 #E8E8EE, -2px 0 0 #E8E8EE;
-  background-image: linear-gradient(to left, rgba(61, 79, 93, 0.5), rgba(61, 79, 93, 0.5));
-  background-position: 0 1.02em;
-  background-repeat: repeat-x;
-  background-size: 1px 1px; }
 
 .post-info, .post-tags, .post-footer {
   display: block; }
