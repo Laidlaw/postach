@@ -49,9 +49,6 @@
       background-color: $cool-blue;
       padding: 2em;
     }
-    .post-body {
-      padding:1em;
-    }
   }
 }
 
@@ -62,10 +59,12 @@
 
 .post-body {
   flex:1;
+  padding:1em;
 }
 .post-info {
   display:flex;
   justify-content:flex-end;
   align-content: stretch;
+  padding:1em;
 
 }
