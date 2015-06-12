@@ -8,7 +8,7 @@
     }
 }
 
-.Button {
+.button {
   transition: background-color 0.2s;
   display: inline-block;
   padding: 0.6em 1em;
@@ -23,13 +23,13 @@
   text-decoration: none;
   white-space: nowrap;
 }
-.Button:focus {
+.button:focus {
   outline: thin dotted #666;
   text-decoration:none;
 }
-.Button:active,
-.Button:focus,
-.Button:hover {
+.button:active,
+.button:focus,
+.button:hover {
   border: 0;
   background: hsla(31, 15%, 50%, 0.25);
   text-decoration:none;
@@ -51,7 +51,7 @@ nav.nav {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  
+
   .breakpoint-#{ $sidebar-switch } & {
     opacity:1;
   }
