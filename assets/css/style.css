@@ -658,9 +658,8 @@ body {
     margin-right: 10px; }
 
 .sidebar {
-  background: #E8E8EE;
+  background: #3d4f5d;
   color: #fff;
-  position: fixed;
   top: 0;
   bottom: 0; }
   .sidebar nav.nav {
