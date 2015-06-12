@@ -85,16 +85,15 @@
 
 
             <nav class="nav">
-
               {# {% for page in pages %}
-                <h3><a href="{{page.permalink}}" title="{{page.title}}" >{{page.title}}</a></h3>
+                <a href="{{page.permalink}}" title="{{page.title}}" >{{page.title}}</a>
               {% endfor %} #}
-              <h3><a href="/selfie" title="About" >About Me</a></h3>
-              <h3>
-                <a href="https://www.instapaper.com/p/alanlaidlaw" title="Instapaper" >Input</a> /
-                <a href="https://medium.com/sudo-science" title="Medium" >Output</a>
-              </h3>
+                <a href="/selfie" title="About" >About Me</a></h3>
 
+                <a href="https://www.instapaper.com/p/alanlaidlaw" title="Instapaper" >Input</a>
+                <a href="https://medium.com/sudo-science" title="Medium" >Output</a>
+            </nav>
+            
                 <ul class="social">
                     {% if site.twitter %}
                   <li >
@@ -168,7 +167,7 @@
                     #}
 
                 {% endif %}
-            </nav>
+
         </header>
 
 
