@@ -13,9 +13,16 @@
   // NAV STARTS OUT INVISIBLE, FADES IN ON HOVER. CLEARLY A BAD IDEA FOR MOBILE
 
   nav.nav {
-    opacity:0;
+    //opacity:0;
     text-align: center;
-
+    -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
     @extend %animate;
     .breakpoint-#{ $sidebar-switch } & {
       opacity:1;
