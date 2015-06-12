@@ -38,7 +38,7 @@ body {
   display: flex;
   flex-direction: row;
   height: 100%;
-  .breakpoint-phone & {
+  .breakpoint-small-tablet-down & {
     flex-direction: column;
   }
 }
