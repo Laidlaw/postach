@@ -220,7 +220,7 @@
             </header>
 
             <div class="post-body" data-type-cleanup="true">
-              {{ post.content }}
+              {{ post.content|truncate(180) }}
             </div>
             <div class="post-info">
                 <p class="date">{{ post.created_at|format_date }}</p>
