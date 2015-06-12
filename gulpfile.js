@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+var cssnext = require('gulp-cssnext');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 // var gulpBowerFiles = require('gulp-bower-files');
@@ -20,6 +21,11 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
         .pipe(sass())
+        .pipe(cssnext({
+          browsers: '> 1%, last 2 versions, Safari > 5, ie > 9, Firefox ESR',
+          compress: true,
+          url: false
+        }))
         .pipe(gulp.dest('assets/css'));
 });
 
@@ -37,7 +43,7 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('assets/js'));
 });
 
 // Watch Files For Changes

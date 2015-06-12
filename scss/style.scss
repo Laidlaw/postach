@@ -10,7 +10,6 @@
 //@import "bower_components/neat/app/assets/stylesheets/neat";
 //@import "bower_components/bitters/app/assets/stylesheets/base";
 
-@import "guides/flexgrid";
 @import "guides/typography";
 //@import "partials/typography";
 @import "partials/global";
@@ -22,13 +21,7 @@
 @import "partials/footer";
 
 .content.home .posts {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   align-content: flex-start;
   list-style: none;
   margin: 0;
