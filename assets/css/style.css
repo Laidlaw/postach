@@ -552,6 +552,18 @@ blockquote {
 body {
   background-color: #E8E8EE; }
 
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%; }
+
 .socialbar-container, .post-tags {
   font-size: 1em; }
 

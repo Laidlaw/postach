@@ -33,7 +33,18 @@ body {
 
 .wrapper {
   // border-top: 10px solid $purple;
-  @extend %pure-g;
+  // @extend %pure-g;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+
 }
 
 .post-info, .post-tags, .post-footer {
