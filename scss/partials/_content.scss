@@ -1,3 +1,22 @@
+.content.home .posts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  article {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
 
 .content-subhead {
     text-transform: uppercase;
@@ -11,10 +30,11 @@
 }
 
 .content {
-  @extend %pure-u-1;
-  @extend %pure-u-4-5;
-  @extend .hug;
-  @extend .accel;
+  //@extend %pure-u-1;
+  //@extend %pure-u-4-5;
+  //@extend .hug;
+  //@extend .accel;
+
   .breakpoint-widescreen & {
     margin: 0 2em 0;
     padding: 2em 3em 0;
@@ -22,7 +42,7 @@
   }
 
   .breakpoint-#{ $sidebar-switch } & {
-    @extend %pure-u-1;
+    //@extend %pure-u-1;
   }
 }
 .posts {

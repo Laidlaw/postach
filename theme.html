@@ -192,18 +192,23 @@
     </div>
 #}
 
-{% if is_home %}
-<h2>THis is home</h2>
-{% endif %}
-    <div class="content">
+      {% if is_home %}
+        <div class="content home"</div>
+      {% else %}
+        <div class="content">
+      {% endif %}
+
 
       {% if is_home or is_tag %}
 
       <section class="posts">
-        <h1 class="content-subhead">Recent Posts</h1>
-          {% if is_tag %}
-          <h4 class="sub-heading span7">Showing all posts tagged {{ tag }}:</h4>
-          {% endif %}
+        <article class="">
+          <h3 class="content-subhead">Recent Posts</h3>
+            {% if is_tag %}
+            <h4 class="sub-heading span7">Showing all posts tagged {{ tag }}:</h4>
+            {% endif %}
+        </article>
+
 
           {% if posts %}
           {% for post in posts %}

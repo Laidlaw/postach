@@ -10,6 +10,7 @@
 
 nav.nav {
   //opacity:0;
+  text-align: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -96,8 +97,8 @@ a.logo:hover {
 }
 // SOCIAL
 ul.social {
-  display:none;
-  display: inline-block;
+
+  display: none;
   margin: 0 auto;
   z-index: 1000;
   text-align:  center;
