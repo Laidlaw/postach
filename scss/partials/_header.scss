@@ -27,7 +27,7 @@ nav.nav {
   width: 55px;
   height: 55px;
   border: 2px solid #ffffff;
-  background-color: #000000;
+  //background-color: #000000;
   margin: 0 auto;
   //margin-top: 120px;
   text-align: center;
@@ -36,7 +36,7 @@ nav.nav {
   font-size:0;
   @extend %animate;
   .breakpoint-#{ $sidebar-switch } & {
-    margin-top: 30px;
+    //margin-top: 30px;
     width: 80px;
     height: 80px;
   }
