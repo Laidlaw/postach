@@ -41,7 +41,7 @@ gulp.task('scripts', function() {
 
         ])
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('assets/js'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('assets/js'));
