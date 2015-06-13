@@ -37,6 +37,7 @@ gulp.task('scripts', function() {
             "bower_components/metaquery/metaquery.jquery.js",
             "bower_components/jquery.sidenotes/lib/jquery.sidenotes.js",
             "bower_components/waypoints/lib/jquery.waypoints.js",
+            "bower_components/waypoints/lib/shortcuts/sticky.js",
             "js/*.js"
 
         ])
