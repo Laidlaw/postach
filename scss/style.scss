@@ -21,32 +21,26 @@
 @import "partials/footer";
 
 .content.home .posts {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 2em;
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-content: flex-start;
+  // list-style: none;
+  // margin: 0;
+  // padding: 0;
+  // margin-bottom: 2em;
 
   article {
-    width: 32%;
-    margin: 0 .3em 1em;
-    // padding: .8em 1em 0;
-  /* background: hsla(31,15%,50%,.1); */
+    margin: .6em 0 0;
     border-radius: 3px;
     background-color: #F1F1F7;
     display: flex;
-    flex-direction: column;
-    /* align-items: inherit; */
-    align-content: stretch;
 
-    .breakpoint-tablet-down & {
-      width: 48%;
-    }
-    .breakpoint-small-tablet-down & {
-      width:100%;
-    }
+    // .breakpoint-tablet-down & {
+    //   width: 48%;
+    // }
+    // .breakpoint-small-tablet-down & {
+    //   width:100%;
+    // }
 
     header {
       background-color: $cool-blue;
@@ -56,16 +50,16 @@
 }
 
 .post.post {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .post-body {
   flex:1;
-  padding:1em;
+  padding:1em 2em;
 }
 .post-info {
   display:flex;
+  display:none;
   justify-content:flex-end;
   align-content: stretch;
 
