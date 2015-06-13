@@ -33,9 +33,10 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src([
-            "bower_components/jquery/jquery.js",
+            "bower_components/jquery/src/jquery.js",
             "bower_components/metaquery/metaquery.jquery.js",
             "bower_components/jquery.sidenotes/lib/jquery.sidenotes.js",
+            "bower_components/waypoints/lib/jquery.waypoints.js",
             "js/*.js"
 
         ])
