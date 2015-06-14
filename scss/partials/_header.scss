@@ -9,6 +9,13 @@
 .sticky-wrapper {
   flex:1;
 }
+.stuck {
+  position:fixed;
+  top:0;
+  .breakpoint-phone & {
+    position:relative;
+  }
+}
 
 
 nav.nav {
