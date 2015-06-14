@@ -68,14 +68,14 @@
     </script>
     {% endif %}
   </head>
-  <body>
+  <body class="wrapper">
 
     {% if is_login %}
 
       {{ login_form }}
 
     {% else  %}
-<div class="wrapper">
+
         <header class="header">
           <h1>
             <a class="logo" href="/"><img class="logo avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" /></a>
@@ -298,6 +298,6 @@
     <!-- <script src="{{ static('themes/_assets/bootstrap/js/bootstrap.min.js') }}"></script> -->
 
     <script src="{{ assets('js/all.js') }}"></script>
-    </div>
+
   </body>
 </html>
