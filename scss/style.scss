@@ -20,12 +20,8 @@
 @import "partials/pagination";
 @import "partials/footer";
 
-.content.home {
-  flex: 8;
-  overflow-y: scroll;
-}
-.content.home .posts {
 
+.content.home .posts {
   article {
     margin: .6em 0 0;
     border-radius: 3px;

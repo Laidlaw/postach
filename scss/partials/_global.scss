@@ -49,8 +49,17 @@ body {
   }
 }
 
+.content.home {
+  flex: 8;
+  overflow-y: scroll;
+  .breakpoint-phone & {
+    overflow-y:visible;
+  }
+}
+
+
 .button {
-  transition: background-color 0.4s;
+  transition: background-color 0.1s;
   display: inline-block;
   padding: 0.6em 1em;
   background: $sky-white;
@@ -72,7 +81,7 @@ body {
 .button:focus,
 .button:hover {
   border: 0;
-  background: $cool-white;
+  background: $cool-blue;
   text-decoration:none;
 }
 
