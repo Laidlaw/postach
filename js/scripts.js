@@ -39,12 +39,6 @@ jQuery(document).ready(function($){
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
   var main = querySelector('main');
-  var waypoint = new Waypoint({
-    element: document.getElementById('article'),
-    handler: function(direction) {
-      console.log('Scrolled to waypoint!');
-    }
-  });
   var sticky = new Waypoint.Sticky({
     element: $('.header')[0]
   });
