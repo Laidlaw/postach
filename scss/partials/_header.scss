@@ -12,6 +12,7 @@
 .stuck {
   position:fixed;
   top:0;
+  width:30%;
   .breakpoint-#{ $sidebar-switch } & {
     position:relative;
   }
