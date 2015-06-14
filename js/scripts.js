@@ -41,7 +41,7 @@ jQuery(document).ready(function($){
   var main = querySelector('main');
   var sticky = new Waypoint.Sticky({
     element: $('.header')[0]
-  })
+  });
 
   function closeMenu() {
     appbarElement.classList.remove('open');
