@@ -12,7 +12,7 @@
 .stuck {
   position:fixed;
   top:0;
-  .breakpoint-phone & {
+  .breakpoint-#{ $sidebar-switch } & {
     position:relative;
   }
 }
