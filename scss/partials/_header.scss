@@ -4,21 +4,24 @@
     h1 {
       text-align: center;
     }
+    .breakpoint-#{ $sidebar-switch } & {
+      display: inline-table;
+      width: 100%;
+    }
 }
-
-.sticky-wrapper {
-  flex:1;
-}
-.stuck {
-  position:fixed;
-  top:0;
-  width:30%;
-  .breakpoint-#{ $sidebar-switch } & {
-    position:relative;
-  }
-}
-
-
+//
+// .sticky-wrapper {
+//   flex:1;
+// }
+// .stuck {
+//   position:fixed;
+//   top:0;
+//   width:30%;
+//   .breakpoint-#{ $sidebar-switch } & {
+//     position:relative;
+//   }
+// }
+//
 nav.nav {
   //opacity:0;
   text-align: center;
@@ -88,7 +91,6 @@ nav.nav {
 // SOCIAL
 ul.social {
 
-  display: none;
   margin: 0 auto;
   z-index: 1000;
   text-align:  center;
