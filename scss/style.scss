@@ -41,7 +41,7 @@
     background-color: $cool-blue;
     padding: 2em;
     width: 30%;
-    .breakpoint-phone & {
+    .breakpoint-#{ $sidebar-switch } & {
       width: auto;
     }
   }
