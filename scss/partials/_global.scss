@@ -52,7 +52,7 @@ body {
 .content.home {
   flex: 8;
   overflow-y: scroll;
-  .breakpoint-#{ $sidebar-switch } & {
+  .breakpoint-tablet-down & {
     overflow-y:visible;
   }
 }

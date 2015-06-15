@@ -98,9 +98,9 @@
   });
 }( this, this.document, jQuery ));
 
-(function() {
-    $('.post-content').sidenotes();
-})();
+// (function() {
+//     $('.post-content').sidenotes();
+// })();
 
 //MAKE YOUTUBE VIDEOS RESPONSIVE
 
