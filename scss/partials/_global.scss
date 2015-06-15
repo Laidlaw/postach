@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: row;
   height: 100%;
-  .breakpoint-small-tablet-down & {
+  .breakpoint-#{ $sidebar-switch } & {
     flex-direction: column;
   }
 }
@@ -52,7 +52,7 @@ body {
 .content.home {
   flex: 8;
   overflow-y: scroll;
-  .breakpoint-small-tablet-down & {
+  .breakpoint-#{ $sidebar-switch } & {
     overflow-y:visible;
   }
 }

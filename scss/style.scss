@@ -27,7 +27,7 @@
     border-radius: 3px;
     background-color: #F1F1F7;
     display: flex;
-    .breakpoint-phone & {
+    .breakpoint-#{ $sidebar-switch } & {
       flex-direction: column;
     }
     // .breakpoint-tablet-down & {

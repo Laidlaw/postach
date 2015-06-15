@@ -4,7 +4,7 @@
     h1 {
       text-align: center;
     }
-    .breakpoint-phone & {
+    .breakpoint-#{ $sidebar-switch } & {
       display: inline-table;
       width: 100%;
       padding:0;
