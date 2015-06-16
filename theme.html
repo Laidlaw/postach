@@ -88,10 +88,10 @@
               {# {% for page in pages %}
                 <a href="{{page.permalink}}" title="{{page.title}}" >{{page.title}}</a>
               {% endfor %} #}
-                <a href="/selfie" title="About" class="button" >&lt;A&gt;bout Me</a></h3>
+                <a href="/selfie" title="About" class="button" >About Me</a></h3>
 
                 <a href="https://www.instapaper.com/p/alanlaidlaw" title="Instapaper" class="button" >Input</a>
-                /<a href="https://medium.com/sudo-science" title="Medium" class="button" >Output</a>
+                <a href="https://medium.com/sudo-science" title="Medium" class="button" >Output</a>
             </nav>
 
                 <ul class="social">
@@ -275,6 +275,13 @@
       <section class="span7 offset1 posts {{ set_active(page.permalink) }}">
         <article class="post whole span7">
           <h1>{{ page.title }}</h1>
+          {% if post.tags %}
+            <ul>
+            {% for tag in post.tags %}
+              <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
+          {% endif %}
           <div class="post-body" data-type-cleanup="true">
             {{ page.content }}
           </div>
