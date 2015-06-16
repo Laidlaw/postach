@@ -49,7 +49,7 @@ nav.nav {
   //margin-top: 120px;
   text-align: center;
   margin-bottom:30px;
-  border-radius: 50%;
+  // border-radius: 50%;
   font-size:0;
   @extend %animate;
   .breakpoint-#{ $sidebar-switch } & {
@@ -125,5 +125,5 @@ ul.social li a {
   }
 }
 ul.social li a:hover {
-  background-color: #0ADFEF;
+  background-color: $blue-tint;
 }
