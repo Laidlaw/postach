@@ -243,6 +243,13 @@
       <section class="posts">
         <article class="post {{post.type}}">
           <h1 class="post-marquee">{{ post.title }}</h1>
+          {% if post.tags %}
+            <ul>
+            {% for tag in post.tags %}
+              <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
+          {% endif %}
           <div class="post-body">
             <div class="post-content" data-type-cleanup="true">
               {{ post.content }}

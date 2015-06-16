@@ -29,6 +29,7 @@ nav.nav {
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  display:flex;
 
   .breakpoint-#{ $sidebar-switch } & {
     opacity:1;
