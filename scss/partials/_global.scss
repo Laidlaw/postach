@@ -65,7 +65,7 @@ body {
   background: $sky-white;
   color: inherit;
   border: 0;
-  border-radius: 2px;
+  // border-radius: 2px;
   cursor: pointer;
   font-size: 0.8125em;
   font-weight: 300;
@@ -74,7 +74,7 @@ body {
   white-space: nowrap;
 }
 .button:focus {
-  outline: thin dotted #666;
+  // outline: thin dotted #666;
   text-decoration:none;
 }
 .button:active,
