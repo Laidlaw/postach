@@ -10,7 +10,7 @@
 	function init() {
 
     var logo = Snap("#svg-container");
-    var title = Snap("#page-title");
+    var title = getElementbyId("#page-title");
     whiteAngle = logo.select("#white-bracket");
     blueAngle = logo.select("#blue-bracket");
 
