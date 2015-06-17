@@ -63,6 +63,11 @@ nav.nav {
   display: block;
   width: 55px;
   height: 55px;
+  .breakpoint-#{ $sidebar-switch } & {
+    //margin-top: 30px;
+    width: 80px;
+    height: 80px;
+  }
 }
 .svg-container svg {
   max-width: 100%;
