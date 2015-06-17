@@ -20,12 +20,8 @@
   ],
   "dependencies": {
     "jquery.sidenotes": "~0.2.0",
-    "pure": "~0.6.0",
-    "bourbon": "~4.2.2",
-    "neat": "~1.7.2",
-    "bitters": "~1.0.0",
-    "materialize": "~0.96.1",
-    "waypoints": "~3.1.1"
+    "waypoints": "~3.1.1",
+    "snapjs": "~1.9.3"
   },
   "devDependencies": {
     "metaquery": "~1.1.1"

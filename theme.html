@@ -77,9 +77,28 @@
     {% else  %}
 
         <header class="header">
-          <h1>
-            <a class="logo" href="/"><img class="logo avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" /></a>
-              <a href="/">Alan Laidlaw</a></h1>
+          <a class="logo" href="/"><div id="svg-container" class="svg-container">
+              <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+              <g id="Layer_4">
+              	<g id="circle-container">
+              		<circle id="circle" fill="#111111" cx="200" cy="200" r="180"/>
+              <path id="letter" fill="#FFFFFF" d="M166.8,237.7h-16.9l44.2-85.3h11.8l44.1,85.3h-16.9l-8.5-16.2h-49.3 M216.9,207.1l-17.1-32.6l-17,32.6
+              		H216.9z"/>
+              	</g>
+              	<path id="blue-bracket" fill="#0ADFEF" d="M271.9,124.6c2.6,0.3,3.9,2.7,4.2,5.2L311,293.7v-198c0-3.9-2.2-7.1-6-7.1l-199.2,0L271.9,124.6z"/>
+              	<path id="white-bracket" fill="#FFFFFF" d="M125.9,276.9c-2.6-0.3-4.8-2.9-5.1-5.4L86,107.6v198c0,3.9,3.1,7.1,7,7.1l198.1,0L125.9,276.9z"/>
+
+              </g>
+              <g id="Layer_7" display="none">
+              	<path display="inline"  fill="#FFFFFF" d="M166.8,237.7h-16.9l44.2-85.3h11.8l44.1,85.3h-16.9l-8.5-16.2h-49.3 M216.9,207.1
+              		l-17.1-32.6l-17,32.6H216.9z"/>
+              </g>
+              </svg>
+            </div>
+            <!-- <img class="logo avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" /> -->
+            </a>
+            <h1><a href="/">Alan Laidlaw</a></h1>
                <!--  <h1 class="brand-title">{{ site.name }}</h1>
                 <h2 class="brand-tagline">Creating a blog layout using Pure</h2> -->
 

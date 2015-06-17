@@ -4,6 +4,29 @@
 
 //MAKE YOUTUBE VIDEOS RESPONSIVE
 
+
+(function() {
+
+	function init() {
+
+    var s = Snap("#logo");
+    whiteRect = s.select("#white-bracket");
+    blueRect = s.select("#blue-bracket");
+    icon = s;
+    icon.hover(function() {
+			  whiteRect.animate({transform: "r45,190,170"}, 500, mina.elastic);
+      blueRect.animate({transform: "r45,210,230"}, 500, mina.elastic);
+      },
+      function() {
+/*      icon.animate({fill: '#111111'}, 500);*/
+				whiteRect.animate({transform: "r0,0,50"}, 500, mina.elastic);
+        blueRect.animate({transform: "r0,0,50"}, 500, mina.elastic);
+			}
+    );
+  }
+  init();
+})();
+
 jQuery(document).ready(function($){
   function responsiveIframe() {
     $('iframe').each(function(){
@@ -39,6 +62,7 @@ jQuery(document).ready(function($){
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
   var main = querySelector('main');
+
   // var sticky = new Waypoint.Sticky({
   //   element: $('.header')[0]
   // });
