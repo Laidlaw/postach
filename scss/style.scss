@@ -13,7 +13,7 @@
 @import "guides/typography";
 //@import "partials/typography";
 @import "partials/global";
-@import "partials/sidebar";
+// @import "partials/sidebar";
 @import "partials/header";
 //@import "partials/content";
 //@import "partials/post";
@@ -47,6 +47,7 @@
   }
 }
 
+
 .post.post {
   max-width: 1000px;
 }
@@ -64,7 +65,7 @@
 }
 .post.whole {
   h1 {
-    display:inline-table;
+  
   }
   .post-tags a {
     @extend .button;
