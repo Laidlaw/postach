@@ -9,7 +9,7 @@
 
 	function init() {
 
-    var s = Snap("#logo");
+    var s = Snap("#al-logo");
     whiteRect = s.select("#white-bracket");
     blueRect = s.select("#blue-bracket");
     icon = s;
