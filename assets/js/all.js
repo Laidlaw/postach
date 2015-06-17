@@ -121,7 +121,7 @@
 
 	function init() {
 
-    var s = Snap("#al-logo");
+    var s = Snap("#svg-container");
     whiteRect = s.select("#white-bracket");
     blueRect = s.select("#blue-bracket");
     icon = s;
