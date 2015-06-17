@@ -21,7 +21,7 @@
   "dependencies": {
     "jquery.sidenotes": "~0.2.0",
     "waypoints": "~3.1.1",
-    "snapjs": "~1.9.3"
+    "snap.svg": "~0.4.1"
   },
   "devDependencies": {
     "metaquery": "~1.1.1"

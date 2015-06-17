@@ -8,7 +8,6 @@
 (function() {
 
 	function init() {
-    var s = Snap("#logo-wrapper");
     Snap.load("assets/images/laidlaw.github.2015.svg", function (f) {
       var logo = Snap("#svg-container");
       whiteAngle = logo.select("#white-bracket");
@@ -24,35 +23,34 @@
           blueAngle.animate({transform: "r0,0,50"}, 500, mina.elastic);
   			}
       );
-      s.append(logo);
     });
   }
   init();
 })();
 
-// jQuery(document).ready(function($){
-//   function responsiveIframe() {
-//     $('iframe').each(function(){
-//       var iw = $(this).width();
-//       var ih = $(this).height();
-//       var ip = $(this).parent().width();
-//       var ipw = ip/iw;
-//       var ipwh = Math.round(ih*ipw);
-//       $(this).css({
-//         'width': ip,
-//         'height' : ipwh,
-//       });
-//     });
-//   }
-//
-//   responsiveIframe();
-//
-//   //Call function again if window resized
-//   $(window).resize(function(){
-//     responsiveIframe();
-//   });
-//
-// });
+jQuery(document).ready(function($){
+  function responsiveIframe() {
+    $('iframe').each(function(){
+      var iw = $(this).width();
+      var ih = $(this).height();
+      var ip = $(this).parent().width();
+      var ipw = ip/iw;
+      var ipwh = Math.round(ih*ipw);
+      $(this).css({
+        'width': ip,
+        'height' : ipwh,
+      });
+    });
+  }
+
+  responsiveIframe();
+
+  //Call function again if window resized
+  $(window).resize(function(){
+    responsiveIframe();
+  });
+
+});
 
 
 // Sidebar navigation
