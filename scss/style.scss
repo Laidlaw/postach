@@ -62,3 +62,14 @@
   align-content: stretch;
 
 }
+.post.whole {
+  h1 {
+    display:inline-table;
+  }
+  .post-tags {
+    @extend .button;
+  }
+  .post-body {
+    padding:0;
+  }
+}
