@@ -264,14 +264,16 @@
 
       <section class="posts">
         <article class="post {{post.type}} whole">
-          <h1 class="post-marquee">{{ post.title }}</h1>
-          {% if post.tags %}
-          <section class="post-tags">
-            {% for tag in post.tags %}
-              <a href="/tag/{{ tag }}">{{ tag }}</a>
-            {% endfor %}
-          </section>
-          {% endif %}
+          <div class="post-body">
+            <h1 class="post-marquee">{{ post.title }}</h1>
+            {% if post.tags %}
+            <nav class="post-tags">
+              {% for tag in post.tags %}
+                <a href="/tag/{{ tag }}">{{ tag }}</a>
+              {% endfor %}
+            </nav>
+            {% endif %}
+          </div>
           <div class="post-body">
             <div class="post-content" data-type-cleanup="true">
               {{ post.content }}
