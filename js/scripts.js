@@ -10,12 +10,13 @@
 	function init() {
 
     var logo = Snap("#svg-container");
+    var title = Snap("#page-title");
     whiteAngle = logo.select("#white-bracket");
     blueAngle = logo.select("#blue-bracket");
 
-    logo.hover(function() {
+    title.hover(function() {
 			  whiteAngle.animate({transform: "r45,200,200"}, 500, mina.elastic);
-      blueAngle.animate({transform: "r45,200,200"}, 500, mina.elastic);
+        blueAngle.animate({transform: "r45,200,200"}, 500, mina.elastic);
       },
       function() {
 /*      icon.animate({fill: '#111111'}, 500);*/
