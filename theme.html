@@ -195,7 +195,7 @@
 
 {#  /////////// EXCLUDED SECTION
     <div class="content">
-      <div class="span3 header">
+      <div class="header">
         <div class="bg-img" style="background-image: url('{% if site.cover_photo %}{{ site.cover_photo }}{% else %}{{ static('themes/expanse/images/cover-photo-1.jpg') }}{% endif %}');"></div>
         <div class="gradient"></div>
 
@@ -250,13 +250,13 @@
           </article>
           {% endfor %}
           {% if not is_tag %}
-          <div class="pagination span6">
+          <div class="pagination">
             {% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; View Previous Posts</a>{% endif %}
             {% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">View More Posts &rarr;</a>{% endif %}
           </div>
           {% endif %}
           {% else %}
-          <h4 class="sub-heading span6">No Posts Yet :(</h4>
+          <h4 class="sub-heading">No Posts Yet :(</h4>
           {% endif %}
       </section>
 
@@ -266,11 +266,11 @@
         <article class="post {{post.type}} whole">
           <h1 class="post-marquee">{{ post.title }}</h1>
           {% if post.tags %}
-          <aside class="post-tags">
+          <section class="post-tags">
             {% for tag in post.tags %}
               <a href="/tag/{{ tag }}">{{ tag }}</a>
             {% endfor %}
-          </aside>
+          </section>
           {% endif %}
           <div class="post-body">
             <div class="post-content" data-type-cleanup="true">
