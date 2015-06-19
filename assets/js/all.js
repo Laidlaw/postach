@@ -124,18 +124,17 @@ if(1==arguments.length){if(d.is(a,"object")){for(var f in a)a[t](f)&&this.data(f
 //     $('.post-content').sidenotes();
 // })();
 
-//MAKE YOUTUBE VIDEOS RESPONSIVE
-
-
 (function() {
 
 	function init() {
 
-    var logo = Snap("#svg-container");
+    var logo = Snap("#svg-container"),
+        atag = document.getElementByTagName("a");
+
     whiteAngle = logo.select("#white-bracket");
     blueAngle = logo.select("#blue-bracket");
 
-    logo.hover(function() {
+    atag.hover(function() {
 			  whiteAngle.animate({transform: "r45,200,200"}, 500, mina.elastic);
         blueAngle.animate({transform: "r45,200,200"}, 500, mina.elastic);
       },
