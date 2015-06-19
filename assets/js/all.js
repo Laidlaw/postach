@@ -129,7 +129,7 @@ if(1==arguments.length){if(d.is(a,"object")){for(var f in a)a[t](f)&&this.data(f
 	function init() {
 
     var logo = Snap("#svg-container"),
-        atag = document.getElementByTagName("a");
+        atag = document.getElementsByTagName("a");
 
     whiteAngle = logo.select("#white-bracket");
     blueAngle = logo.select("#blue-bracket");
