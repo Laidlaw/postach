@@ -12,6 +12,9 @@ h1,h2,h3,h4,h5 {
   color:$cool-blue;
   line-height:1.4em;
 }
+p {
+  font-weight:100;
+}
 .post h1 {
 
   //@extend .fancy-underline;
