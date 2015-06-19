@@ -134,7 +134,7 @@ if(1==arguments.length){if(d.is(a,"object")){for(var f in a)a[t](f)&&this.data(f
     whiteAngle = logo.select("#white-bracket");
     blueAngle = logo.select("#blue-bracket");
 
-    atag.hover(function() {
+    logo.hover(function() {
 			  whiteAngle.animate({transform: "r45,200,200"}, 500, mina.elastic);
         blueAngle.animate({transform: "r45,200,200"}, 500, mina.elastic);
       },
