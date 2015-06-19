@@ -101,7 +101,7 @@
 
             <!-- <img class="logo avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" /> -->
             </a>
-            <h1><a href="/">Alan Laidlaw</a></h1>
+            <h1><a class="site-title" href="/">Alan Laidlaw</a></h1>
                <!--  <h1 class="brand-title">{{ site.name }}</h1>
                 <h2 class="brand-tagline">Creating a blog layout using Pure</h2> -->
 
@@ -263,7 +263,7 @@
       {% elif post %}
 
       <section class="posts">
-        <article class="post {{post.type}} whole">
+        <article class="post {{post.type}} {{ tag }} whole">
           <div class="post-marquee">
             <h1>{{ post.title }}</h1>
             {% if post.tags %}
