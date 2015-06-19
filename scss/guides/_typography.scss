@@ -10,6 +10,7 @@ h1,h2,h3,h4,h5 {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   color:$cool-blue;
+  line-height:1.4em;
 }
 .post h1 {
 
@@ -29,9 +30,14 @@ h1, h2 {
     text-decoration: none;
   }
 }
-
+strong {
+  font-weight:500;
+}
 aside {
   border-right:6px solid $blue;
   display: inline-block;
   background: darken($cool-white, 10);
+}
+img {
+  max-width:100%;
 }
